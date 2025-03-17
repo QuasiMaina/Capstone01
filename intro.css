@@ -1,0 +1,139 @@
+/* Intro */
+
+body {
+    background: linear-gradient(to left, hsla(0, 3%, 7%, 0.979), #099fc5, #ff6b6b);
+}
+
+p {
+    font-size: large;
+    font-family: cursive;
+    color:rgb(233, 236, 12);
+}
+
+h1 {
+    color: #ffffff;
+}
+img {
+    width: 450%;
+    height: 10%;
+    max-width: 460px;
+   vertical-align: middle;
+   margin-left: 50px;
+   margin-right: 100px;
+   margin-bottom: 00px;
+
+}
+
+.wrapper {
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+}
+.profile {
+   color: #00000000;
+}
+.intro {
+    flex: 1;
+}
+.footer {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    margin-bottom: 30px;
+    left: 600px;
+    bottom: -10px;
+
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 200px;
+    border-bottom: 10px;
+ 
+}
+
+.footer-icons a {
+    display: inline-block; /* Make the anchor a block element */
+    color: rgba(3, 3, 3, 0.733);
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    padding: 15px;
+    border-radius: 35%; /* Make the icons circular */
+    background: linear-gradient(45deg, #ff0202d8, #33f7c652,#a19e9e,#ffffff); /* Gradient background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.footer-icons a:hover {
+    transform: scale(1.1); /* Scale up the icon */
+    background: linear-gradient(45deg, #f7b733, #ff6b6b,#ffffff); /* Reverse gradient on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+/* burger menu */
+b {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center
+    
+}
+.menu-container {
+    position: relative;
+}
+.burger {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor:pointer
+
+    
+}
+.burger div {
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    
+}
+.dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.452);
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    text-decoration: none;
+    
+}
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.dropdown ul li:hover {
+    background-color: #01d6fc7c;
+}
+.menu-container:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+

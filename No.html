@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>annotying button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <body>
+        <div class="container">
+            <button id="annoying-btn">Click Me</button>
+        </div>
+
+        <script>
+            let clickCount = 0;
+            const button = document.getElementById('annoying-btn');
+            const container = document.getElementById('button-container');
+    
+            function moveButton(button) {
+                const x = Math.random() * (window.innerWidth - 100);
+                const y = Math.random() * (window.innerHeight - 50);
+                button.style.position = "absolute";
+                button.style.left = `${Math.max(10, x)}px`;
+                button.style.top = `${Math.max(10, y)}px`;
+                button.style.transform = `rotate(${Math.random() * 360}deg) scale(${Math.random() * 1.5 + 0.5})`;
+            }
+    
+            function changeText(button) {
+                const messages = ["Almost!", "Try Again!", "Nope!", "Missed!", "Not Even Close!", "Too Slow!", "Haha!", "Keep Trying!", "You Wish!", "No Chance!", "Give Up!"];
+                button.textContent = messages[Math.floor(Math.random() * messages.length)];
+            }
+    
+            function fadeButton(button) {
+                let currentOpacity = parseFloat(window.getComputedStyle(button).opacity);
+                if (currentOpacity > 0.2) {
+                    button.style.opacity = `${currentOpacity - 0.1}`;
+                }
+            }
+    
+            function changeColor(button) {
+                button.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+            }
+    
+            function shakeScreen() {
+                const intensity = 20; // Increased shake strength
+                let count = 0;
+                const interval = setInterval(() => {
+                    document.body.style.transform = `translate(${Math.random() * intensity - intensity / 2}px, ${Math.random() * intensity - intensity / 2}px)`;
+                    if (count > 10) {
+                        clearInterval(interval);
+                        document.body.style.transform = '';
+                    }
+                    count++;
+                }, 50);
+            }
+    
+            function addFakeButton() {
+                const fakeButton = document.createElement("button");
+                fakeButton.className = "annoying-btn";
+                fakeButton.textContent = "Click Me";
+                fakeButton.style.position = "absolute";
+                fakeButton.style.left = `${Math.random() * window.innerWidth}px`;
+                fakeButton.style.top = `${Math.random() * window.innerHeight}px`;
+                fakeButton.addEventListener('mouseover', () => moveButton(fakeButton));
+                fakeButton.addEventListener('click', handleClick);
+                container.appendChild(fakeButton);
+            }
+    
+            function handleClick(event) {
+                clickCount++;
+                changeText(event.target);
+                changeColor(event.target);
+                fadeButton(event.target);
+                moveButton(event.target);
+                shakeScreen();
+                if (clickCount % 3 === 0) {
+                    document.body.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+                }
+                if (clickCount % 5 === 0) {
+                    addFakeButton();
+                }
+            }
+    
+            button.addEventListener('mouseover', () => moveButton(button));
+            button.addEventListener('click', handleClick);
+        </script>
+</body>
+</html>

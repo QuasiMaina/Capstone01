@@ -1,0 +1,132 @@
+body {
+    background: linear-gradient(to right,#dd9c9c, hsla(216, 100%, 68%, 0.651), #15aacf, #ff4242cb);
+}
+.form {
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+}
+.nursery {
+   color: #f0ebeb00;
+}
+.fp {
+    flex: 1;
+}
+h1 {
+    color: #1a1918f6;
+}
+p {
+    color: #f0f1ed;
+    font-family: cursive;
+    font-size: larger;
+}
+/* burger menu */
+b {
+    font-family: Arial, sans-serif;
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-end;
+    align-items:center
+    
+    
+}
+.menu-container {
+    position: absolute;
+    left:30px;
+    top: 20px;
+    color: #f7b733;
+}
+.burger {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor:pointer
+    
+
+    
+}
+.burger div {
+    width: 100%;
+    height: 5px;
+    background-color: #af1313;
+    transition: all 0.3s ease;
+
+
+    
+}
+.dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(252, 250, 248, 0.589);
+    width: 150px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    
+}
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.dropdown ul a li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    text-decoration: none;
+}
+.dropdown ul li:hover {
+    background-color: #01d6fc7c;
+    text-decoration: none;
+}
+.menu-container:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+.footer {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    margin-bottom: 30px;
+    left: 600px;
+    bottom: -10px;
+
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 200px;
+    border-bottom: 10px;
+ 
+}
+
+.footer-icons a {
+    display: inline-block; /* Make the anchor a block element */
+    color: rgba(3, 3, 3, 0.733);
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    padding: 15px;
+    border-radius: 35%; /* Make the icons circular */
+    background: linear-gradient(45deg, #ff0202d8, #33f7c652,#a19e9e,#ffffff); /* Gradient background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.footer-icons a:hover {
+    transform: scale(1.1); /* Scale up the icon */
+    background: linear-gradient(45deg, #f7b733, #ff6b6b,#ffffff); /* Reverse gradient on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
