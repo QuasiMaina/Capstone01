@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background: linear-gradient(to right, hsla(0, 0%, 100%, 0.048), #099fc5, #ff6b6b,#cccaca57);
 }
@@ -122,4 +123,196 @@ b {
     transform: scale(1.1); /* Scale up the icon */
     background: linear-gradient(45deg, #f7b733, #ff6b6b,#ffffff); /* Reverse gradient on hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+=======
+body {
+    background: linear-gradient(to right, hsla(0, 0%, 100%, 0.048), #099fc5, #ff6b6b,#cccaca57);
+}
+.picture {
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+}
+.darasa {
+   color: #f0ebeb00;
+}
+.dop {
+    flex: 1;
+}
+h1 {
+    color: #f8f404;
+}
+p {
+    color: #0d0d0e;
+    font-family: cursive;
+    font-size: larger;
+}
+/* burger menu */
+b {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center
+    
+}
+.menu-container {
+    position: absolute;
+    left:30px;
+    top: 20px;
+}
+.burger {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor:pointer
+
+    
+}
+.burger div {
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    
+}
+.dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.452);
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    text-decoration: none;
+    
+}
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.dropdown ul li:hover {
+    background-color: #01d6fc7c;
+}
+.menu-container:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+.footer {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    margin-bottom: 30px;
+    left: 600px;
+    bottom: -10px;
+
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 200px;
+    border-bottom: 10px;
+ 
+}
+
+.footer-icons a {
+    display: inline-block; /* Make the anchor a block element */
+    color: rgba(3, 3, 3, 0.733);
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    padding: 15px;
+    border-radius: 35%; /* Make the icons circular */
+    background: linear-gradient(45deg, #ff0202d8, #33f7c652,#a19e9e,#ffffff); /* Gradient background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.footer-icons a:hover {
+    transform: scale(1.1); /* Scale up the icon */
+    background: linear-gradient(45deg, #f7b733, #ff6b6b,#ffffff); /* Reverse gradient on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+
+/* MOBILE MEDIA QUERY */
+@media (max-width: 768px) {
+    body {
+        text-align: center;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: medium;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .footer {
+        width: 100%;
+        left: 0;
+        transform: none;
+        bottom: 0;
+        padding: 10px;
+    }
+
+    .footer-icons {
+        width: auto;
+        gap: 10px;
+    }
+
+    .footer-icons a {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .menu-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .burger {
+        width: 30px;
+        height: 25px;
+    }
+
+    .dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown ul li {
+        padding: 8px;
+    }
+>>>>>>> 06e5009 (new changes)
 }

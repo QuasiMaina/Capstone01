@@ -7,7 +7,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    gap: 5rem;
+    gap: 9rem;
 }
 .darasa {
    color: #f0ebeb00;
@@ -99,7 +99,7 @@ b {
     padding: 20px 0;
     position: fixed;
     margin-bottom: 30px;
-    left: 600px;
+    left: 550px;
     bottom: -10px;
 
 }
@@ -129,4 +129,71 @@ b {
     transform: scale(1.1); /* Scale up the icon */
     background: linear-gradient(45deg, #f7b733, #ff6b6b,#ffffff); /* Reverse gradient on hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+
+/* MOBILE MEDIA QUERY */
+@media (max-width: 768px) {
+    body {
+        text-align: center;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: medium;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .footer {
+        width: 100%;
+        left: 10;
+        transform: none;
+        bottom: 0;
+        padding: 10px;
+    }
+
+    .footer-icons {
+        width: auto;
+        gap: 10px;
+    }
+
+    .footer-icons a {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .menu-container {
+        display: flex;
+ 
+        justify-content: center;
+        width: 100%;
+    }
+
+    .burger {
+        width: 30px;
+        height: 25px;
+    }
+
+    .dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown ul li {
+        padding: 8px;
+    }
 }

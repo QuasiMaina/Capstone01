@@ -7,6 +7,8 @@ document.getElementById('noButton').addEventListener('click', function() {
     alert('You clicked No!');
 });
 
+
+
 // Intro
 document.querySelectorAll('.footer-icons a').forEach(icon => {
     icon.addEventListener('click', function(event) {
