@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Intro */
 
 body {
@@ -137,8 +136,6 @@ b {
     opacity: 1;
     visibility: visible;
 }
-
-=======
 /* Intro */
 
 body {
@@ -340,7 +337,4 @@ b {
     }
 
     .dropdown ul li {
-        padding: 8px;
-    }
-}
->>>>>>> 06e5009 (new changes)
+        padding: 8px;    }}
